@@ -121,6 +121,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Snake.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\..\..\Desktop\sfml\SFML-2.5.0\bin\openal32.dll" />
@@ -134,6 +135,10 @@
     <None Include="..\..\..\..\Desktop\sfml\SFML-2.5.0\bin\sfml-system-d-2.dll" />
     <None Include="..\..\..\..\Desktop\sfml\SFML-2.5.0\bin\sfml-window-2.dll" />
     <None Include="..\..\..\..\Desktop\sfml\SFML-2.5.0\bin\sfml-window-d-2.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Defines.h" />
+    <ClInclude Include="Snake.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
