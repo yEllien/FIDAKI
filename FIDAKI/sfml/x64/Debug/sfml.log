@@ -1,2 +1,8 @@
 ﻿  main.cpp
-c:\users\elli\source\repos\sfml\sfml\main.cpp(1): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+c:\users\elli\desktop\fidaki\fidaki\sfml\main.cpp(2): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Snake.cpp
+c:\users\elli\desktop\fidaki\fidaki\sfml\snake.h(7): error C2143: syntax error: missing ';' before '<'
+c:\users\elli\desktop\fidaki\fidaki\sfml\snake.h(7): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+c:\users\elli\desktop\fidaki\fidaki\sfml\snake.h(7): error C2238: unexpected token(s) preceding ';'
+c:\users\elli\desktop\fidaki\fidaki\sfml\snake.cpp(4): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Generating Code...
