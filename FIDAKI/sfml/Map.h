@@ -11,11 +11,14 @@ class Map {
 public:
     Map();
 	void draw(RenderWindow* a, Snake *s);
+	void update(RenderWindow* a);
 
 private:
+	Vector2f dir = { 0,0 };
+	Snake s;
+	Event ev;
     vector <vector <RectangleShape>> map;
-
-
+	Vector2i food;
    
 };
 

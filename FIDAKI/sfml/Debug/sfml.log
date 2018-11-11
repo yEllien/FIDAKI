@@ -1,17 +1,5 @@
-﻿  Map.cpp
-c:\users\elli\desktop\fidaki\fidaki\sfml\map.cpp(18): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
-          with
-          [
-              T=float
-          ]
-c:\users\elli\desktop\fidaki\fidaki\sfml\map.cpp(33): warning C4018: '<': signed/unsigned mismatch
-c:\users\elli\desktop\fidaki\fidaki\sfml\map.cpp(35): warning C4244: 'argument': conversion from 'T' to 'const unsigned int', possible loss of data
-          with
-          [
-              T=float
-          ]
-  Snake.cpp
-  main.cpp
-c:\users\elli\desktop\fidaki\fidaki\sfml\main.cpp(22): warning C4101: 'ev': unreferenced local variable
-  Generating Code...
+﻿  main.cpp
+c:\users\elli\desktop\fidaki\fidaki\sfml\main.cpp(25): warning C4244: 'initializing': conversion from 'clock_t' to 'float', possible loss of data
+c:\users\elli\desktop\fidaki\fidaki\sfml\main.cpp(30): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\elli\desktop\fidaki\fidaki\sfml\main.cpp(32): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
   sfml.vcxproj -> C:\Users\Elli\Desktop\FIDAKI\FIDAKI\Debug\sfml.exe

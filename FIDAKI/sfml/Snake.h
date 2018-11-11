@@ -10,9 +10,13 @@ class Snake
 {
 public:
 	Snake();
-
+	
+	void move(Vector2f vec);
+	
 	vector <Vector2f> s;
 	
+	void check();
+
 	void create();
 };
 

@@ -1,4 +1,4 @@
 #pragma once
 
-#define CUBE_SIZE 8
-#define CUBE_NUMBER 100
+#define CUBE_SIZE 10
+#define CUBE_NUMBER 80
