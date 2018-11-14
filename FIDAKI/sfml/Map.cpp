@@ -30,7 +30,7 @@ Map::Map()
 }
 
 		
-void Map::draw(RenderWindow *a, Snake* s)
+void Map::draw(RenderWindow *a)
 {
 	a->clear();
 
@@ -42,10 +42,14 @@ void Map::draw(RenderWindow *a, Snake* s)
 		}
 	}
 
-	for (int i = 0; i < s->s.size(); i++)
+	for (int i = 0; i < s.s.size(); i++)
 	{
-		map[s->s[i].x][s->s[i].y].setFillColor(Color::White);
+		map[s.s[i].x][s.s[i].y].setFillColor(Color::White);
 	}
+
+    for (int i = 0; i < s1.s.size(); i++) {
+        map[s1.s[i].x][s1.s[i].y].setFillColor(Color::White);
+    }
 
 	map[food.x][food.y].setFillColor(Color::Red);
 
@@ -57,7 +61,7 @@ void Map::draw(RenderWindow *a, Snake* s)
 		}
 	}
 
-	a->display();
+    a->display();
 }
 		
 
@@ -65,14 +69,21 @@ void Map::update(RenderWindow *a)
 {
 
 	s.move(dir);
-	draw(a, &s);
+    s1.move(dir1);
+	draw(a);
+    
 
-
+   
 	if (food == Vector2i(s.s[0]))
 	{
 		s.create();
 		food = { rand() % CUBE_NUMBER, rand() % CUBE_NUMBER };
 	}
+
+    if (food == Vector2i(s1.s[0])) {
+        s1.create();
+        food = {rand() % CUBE_NUMBER, rand() % CUBE_NUMBER};
+    }
 
 	s.check();
 
@@ -83,6 +94,30 @@ void Map::update(RenderWindow *a)
 		{
 			switch (ev.key.code)
 			{
+            case Keyboard::Up:
+                if (dir1 != Vector2f(0, 1)) {
+                    dir1.x = 0;
+                    dir1.y = -1;
+                }
+                break;
+            case Keyboard::Left:
+                if (dir1 != Vector2f(1, 0)) {
+                    dir1.x = -1;
+                    dir1.y = 0;
+                }
+                break;
+            case Keyboard::Down:
+                if (dir1 != Vector2f(0, -1)) {
+                    dir1.x = 0;
+                    dir1.y = 1;
+                }
+                break;
+            case Keyboard::Right:
+                if (dir1 != Vector2f(-1, 0)) {
+                    dir1.x = 1;
+                    dir1.y = 0;
+                }
+                break;
 			case Keyboard::W:
 				if (dir != Vector2f(0, 1))
 				{

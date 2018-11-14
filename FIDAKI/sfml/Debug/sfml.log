@@ -1,5 +1,25 @@
-﻿  main.cpp
-c:\users\elli\desktop\fidaki\fidaki\sfml\main.cpp(25): warning C4244: 'initializing': conversion from 'clock_t' to 'float', possible loss of data
-c:\users\elli\desktop\fidaki\fidaki\sfml\main.cpp(30): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-c:\users\elli\desktop\fidaki\fidaki\sfml\main.cpp(32): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
-  sfml.vcxproj -> C:\Users\Elli\Desktop\FIDAKI\FIDAKI\Debug\sfml.exe
+﻿  Map.cpp
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\map.cpp(10): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\map.cpp(23): warning C4244: 'argument': conversion from 'int' to 'T', possible loss of data
+          with
+          [
+              T=float
+          ]
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\map.cpp(45): warning C4018: '<': signed/unsigned mismatch
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\map.cpp(47): warning C4244: 'argument': conversion from 'T' to 'const unsigned int', possible loss of data
+          with
+          [
+              T=float
+          ]
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\map.cpp(50): warning C4018: '<': signed/unsigned mismatch
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\map.cpp(51): warning C4244: 'argument': conversion from 'T' to 'const unsigned int', possible loss of data
+          with
+          [
+              T=float
+          ]
+  main.cpp
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\main.cpp(25): warning C4244: 'initializing': conversion from 'clock_t' to 'float', possible loss of data
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\main.cpp(31): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\main.cpp(33): warning C4244: 'argument': conversion from 'double' to 'DWORD', possible loss of data
+  Generating Code...
+  sfml.vcxproj -> C:\Users\Αντονιο Τρπεσκι\Desktop\FIDAKI\FIDAKI\Debug\sfml.exe
