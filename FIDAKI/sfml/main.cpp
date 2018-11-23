@@ -30,7 +30,7 @@ int main()
 
 		float duration = (std::clock() - start) / (double)CLOCKS_PER_SEC;
 
-		Sleep(CUBE_NUMBER/1.5-duration);
+		Sleep(CUBE_NUMBER*2-duration);
 
 	}
 

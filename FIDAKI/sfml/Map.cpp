@@ -44,11 +44,11 @@ void Map::draw(RenderWindow *a)
 
 	for (int i = 0; i < s.s.size(); i++)
 	{
-		map[s.s[i].x][s.s[i].y].setFillColor(Color::White);
+		map[s.s[i].x][s.s[i].y].setFillColor(Color::Green);
 	}
 
     for (int i = 0; i < s1.s.size(); i++) {
-        map[s1.s[i].x][s1.s[i].y].setFillColor(Color::White);
+        map[s1.s[i].x][s1.s[i].y].setFillColor(Color::Blue);
     }
 
 	map[food.x][food.y].setFillColor(Color::Red);
@@ -87,6 +87,7 @@ void Map::update(RenderWindow *a)
 
 	s.check();
 
+	s.move(dir);
 
 	while (a->pollEvent(ev))
 	{
@@ -98,24 +99,32 @@ void Map::update(RenderWindow *a)
                 if (dir1 != Vector2f(0, 1)) {
                     dir1.x = 0;
                     dir1.y = -1;
+
+					s.move(dir);
                 }
                 break;
             case Keyboard::Left:
                 if (dir1 != Vector2f(1, 0)) {
                     dir1.x = -1;
                     dir1.y = 0;
+
+					s.move(dir);
                 }
                 break;
             case Keyboard::Down:
                 if (dir1 != Vector2f(0, -1)) {
                     dir1.x = 0;
                     dir1.y = 1;
+
+					s.move(dir);
                 }
                 break;
             case Keyboard::Right:
                 if (dir1 != Vector2f(-1, 0)) {
                     dir1.x = 1;
                     dir1.y = 0;
+
+					s.move(dir);
                 }
                 break;
 			case Keyboard::W:
@@ -123,6 +132,8 @@ void Map::update(RenderWindow *a)
 				{
 					dir.x = 0;
 					dir.y = -1;
+
+					s.move(dir);
 				}
 				break;
 			case Keyboard::A:
@@ -130,6 +141,8 @@ void Map::update(RenderWindow *a)
 				{
 					dir.x = -1;
 					dir.y = 0;
+
+					s.move(dir);
 				}
 				break;
 			case Keyboard::S:
@@ -137,6 +150,8 @@ void Map::update(RenderWindow *a)
 				{
 					dir.x = 0;
 					dir.y = 1;
+
+					s.move(dir);
 				}
 				break;
 			case Keyboard::D:
@@ -144,6 +159,8 @@ void Map::update(RenderWindow *a)
 				{
 					dir.x = 1;
 					dir.y = 0;
+
+					s.move(dir);
 				}
 				break;
 			}

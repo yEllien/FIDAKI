@@ -20,8 +20,14 @@ void Snake::create()
 
 void Snake::move(Vector2f vec)
 {
+	for (int i = s.size()-1; i > 0; i--)
+	{
+		s[i] = s[i - 1];
+	}
+
 
 	s[0] += vec;
+
 	
 	if (s[0].x > CUBE_NUMBER-1)
 	{
@@ -32,7 +38,6 @@ void Snake::move(Vector2f vec)
 		s[0].x += CUBE_NUMBER-1;
 	}
 
-
 	if (s[0].y > CUBE_NUMBER-1)
 	{
 		s[0].y -= CUBE_NUMBER;
@@ -41,14 +46,6 @@ void Snake::move(Vector2f vec)
 	{
 		s[0].y += CUBE_NUMBER-1;
 	}
-
-
-
-	for (int i = s.size()-1; i > 0; i--)
-	{
-		s[i] = s[i - 1];
-	}
-
 
 }
 
