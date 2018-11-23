@@ -1,3 +1,15 @@
-﻿  Snake.cpp
-c:\users\elli\desktop\fidaki\fidaki\sfml\snake.cpp(56): warning C4018: '<': signed/unsigned mismatch
-  sfml.vcxproj -> C:\Users\Elli\Desktop\FIDAKI\FIDAKI\Debug\sfml.exe
+﻿  main.cpp
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\main.cpp(21): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\main.cpp(22): warning C4244: 'argument': conversion from 'double' to 'T', possible loss of data
+          with
+          [
+              T=int
+          ]
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\main.cpp(29): warning C4244: 'initializing': conversion from 'clock_t' to 'float', possible loss of data
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\main.cpp(35): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+c:\users\αντονιο τρπεσκι\desktop\fidaki\fidaki\sfml\main.cpp(37): warning C4244: 'argument': conversion from 'float' to 'DWORD', possible loss of data
+  sfml.vcxproj -> C:\Users\Αντονιο Τρπεσκι\Desktop\FIDAKI\FIDAKI\Debug\sfml.exe

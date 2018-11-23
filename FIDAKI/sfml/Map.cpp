@@ -2,14 +2,14 @@
 #include "Snake.h"
 #include <SFML/Graphics.hpp>
 #include <cstdlib>
-
+#include <Windows.h>
 
 
 Map::Map() 
 {
 	srand(time(0));
 
-	food = { CUBE_NUMBER / 2,CUBE_NUMBER / 2 };
+    food = {rand() % CUBE_NUMBER, rand() % CUBE_NUMBER};
 
     for(int i = 0; i < CUBE_NUMBER; i++)
     {
@@ -70,6 +70,7 @@ void Map::update(RenderWindow *a)
 
 	s.move(dir);
     s1.move(dir1);
+
 	draw(a);
     
 
@@ -87,10 +88,13 @@ void Map::update(RenderWindow *a)
 
 	s.check();
 
-	s.move(dir);
 
 	while (a->pollEvent(ev))
 	{
+        if (ev.type == Event::Closed) {
+            a->close();
+            exit(0);
+        }
 		if (ev.type == Event::KeyPressed)
 		{
 			switch (ev.key.code)
@@ -100,7 +104,7 @@ void Map::update(RenderWindow *a)
                     dir1.x = 0;
                     dir1.y = -1;
 
-					s.move(dir);
+					s1.move(dir);
                 }
                 break;
             case Keyboard::Left:
@@ -108,7 +112,7 @@ void Map::update(RenderWindow *a)
                     dir1.x = -1;
                     dir1.y = 0;
 
-					s.move(dir);
+					s1.move(dir);
                 }
                 break;
             case Keyboard::Down:
@@ -116,7 +120,7 @@ void Map::update(RenderWindow *a)
                     dir1.x = 0;
                     dir1.y = 1;
 
-					s.move(dir);
+					s1.move(dir);
                 }
                 break;
             case Keyboard::Right:
@@ -124,7 +128,7 @@ void Map::update(RenderWindow *a)
                     dir1.x = 1;
                     dir1.y = 0;
 
-					s.move(dir);
+					s1.move(dir);
                 }
                 break;
 			case Keyboard::W:
